@@ -1,6 +1,12 @@
 NAME = so_long
 
 SRC = main.c\
+	init.c\
+	ft_mapcheck.c\
+	ft_readmap.c\
+	gnl/get_next_line.c\
+	gnl/get_next_line_utils.c
+
 
 HDRS = mandatory/so_long.h
 

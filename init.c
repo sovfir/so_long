@@ -6,14 +6,15 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:56:47 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/17 19:22:56 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/21 21:22:32 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	main_init(t_data	*main)
+void	ft_main_init(t_data	*main, char *argv)
 {
+	main->fn = argv;
 	main->height = 0;
 	main->width = 0;
 	main->count_c = 0;

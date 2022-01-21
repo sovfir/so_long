@@ -6,12 +6,12 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:49:52 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/17 20:20:09 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/21 21:36:08 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include "get_next_line.h"
 #include "../so_long.h"
-#include "get_next_line.h"
 
 char	*ft_new_string(char *memory)
 {

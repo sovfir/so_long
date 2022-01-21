@@ -6,12 +6,12 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 19:49:22 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/17 19:49:40 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/21 21:38:21 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
-#include "get_next_line.h"
+// #include "get_next_line.h"
+#include "../so_long.h"
 
 
 size_t	ft_strlen(const char *str)
