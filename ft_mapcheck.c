@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 19:51:25 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/21 21:13:37 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/22 19:19:18 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_result(t_data	*data)
 {
 	mlx_clear_window(data->mlx, data->win);
 	mlx_put_image_to_window(data->mlx, data->win, data->graphics->win, data->width * 40 / 2.4, data->height * 40 / 4);
-
 }
 
 void	ft_setchar(t_data	*data)
@@ -24,6 +23,10 @@ void	ft_setchar(t_data	*data)
 	int	i;
 	int	j;
 	int	ex;
+
+	i = 0;
+	j = 0;
+	ex = 0;
 	while (data->map[j])
 	{
 		i = 0;
@@ -56,7 +59,7 @@ void	ft_charcheck(t_data	*data)
 	{
 		while (data->map[j][i])
 		{
-			if (data->map[j][i] == 'P' || data->map[j][i] == 'E' || data->map[j][i] == '1' || data->map[j][i] == 'C' || data->map[j][i] == '\0')
+			if (data->map[j][i] == 'P' || data->map[j][i] == 'E' || data->map[j][i] == '1' || data->map[j][i] == 'C' || data->map[j][i] == '0')
 				i++;
 			else
 			{

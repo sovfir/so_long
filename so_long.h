@@ -11,6 +11,13 @@
 # define WIN "./graphics/win.xpm"
 #  define BUFFER_SIZE 2
 
+# define ESC 53
+# define W 13
+# define A 0
+# define S 1
+# define D 2
+
+
 # include "mlx/mlx.h"
 # include <stdlib.h>
 # include <unistd.h>
@@ -69,4 +76,19 @@ void	ft_charcheck(t_data	*data);
 void	ft_formatcheck(t_data *data);
 void	ft_wallcheck(t_data	*data);
 void	ft_allcheck(t_data	*data);
+
+int		ft_exit_empty(t_data	*data);
+void	ft_put_hero(t_data	*data, int	*j,	int	*i);
+void	ft_put_wall(t_data	*data, int	*j, int	*i);
+void	ft_put_space(t_data	*data, int	*j, int	*i);
+void	ft_put_map(t_data	*data);
+int		ft_frame(t_data *data);
+
+// void	ft_move_w(t_data *data);
+// void	ft_move_s(t_data *data);
+// void	ft_move_a(t_data *data);
+// void	ft_move_d(t_data *data);
+int		ft_press_button(int keycode, t_data *data);
+
+
 #endif

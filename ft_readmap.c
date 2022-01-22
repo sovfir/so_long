@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 19:21:20 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/21 21:31:07 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/22 17:39:32 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ data->map[index] = NULL;
 free(line);
 line = NULL;
 close(fd);
+printf("ft_readmap\n");
 }
 
 void	ft_mapheight(t_data *data)
@@ -43,20 +44,22 @@ void	ft_mapheight(t_data *data)
 	line = get_next_line(fd);
 	if (!line)
 	{
-		printf("Cant read file");
+		printf("Cant read file\n");
 		exit(EXIT_FAILURE);
 	}
 	while(line[data->width] != '\0')
 		data->width++;
 	while (line)
+	{
 		if ((int)ft_strlen(line) != data->width)
 		{
-			printf("ERROR! MAP IS NOT VALID!!!!");
+			printf("ERROR! MAP IS NOT VALID!!!!\n");
 			exit(EXIT_FAILURE);
 		}
 		data->height++;
 		free(line);
 		line = get_next_line(fd);
-		line = NULL;
-		close(fd);
+	}
+	line = NULL;
+	close(fd);
 }

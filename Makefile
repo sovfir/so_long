@@ -1,18 +1,28 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/01/22 15:40:27 by gjacinta          #+#    #+#              #
+#    Updated: 2022/01/22 17:20:36 by gjacinta         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = so_long
 
 SRC = main.c\
 	init.c\
 	ft_mapcheck.c\
 	ft_readmap.c\
-	gnl/get_next_line.c\
-	gnl/get_next_line_utils.c
+	get_next_line.c\
+	get_next_line_utils.c\
+	ft_map_create.c\
+	ft_move.c
 
+HDRS = so_long.h
 
-HDRS = mandatory/so_long.h
-
-HDRS_BONUS = bonus/so_long_bonus.h
-
-OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 OBJ = $(SRC:.c=.o)
 
