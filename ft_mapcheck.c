@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 19:51:25 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/22 19:19:18 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/24 20:09:57 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ void	ft_setchar(t_data	*data)
 		j++;
 	}
 	if (data->count_c == 0 || data->player_c == 0 || ex == 0 || data->player_c > 1)
-		printf("ERROR! INVALID MAP");
-		exit(EXIT_FAILURE);
+		printf("Error.\n WRONG MAP"), exit(EXIT_FAILURE);
 }
 
 void	ft_charcheck(t_data	*data)

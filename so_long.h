@@ -8,7 +8,7 @@
 # define EXIT_C "./pics/door_closed.xpm"
 # define EXIT_O "./pics/door_open.xpm"
 # define KEY "./pics/key.xpm"
-# define WIN "./graphics/win.xpm"
+# define WIN "./pics/win.xpm"
 #  define BUFFER_SIZE 2
 
 # define ESC 53

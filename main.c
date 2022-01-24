@@ -6,15 +6,16 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:55:30 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/22 19:20:22 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/24 20:18:24 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
+#include <stdio.h>
 
 void	ft_allcheck(t_data	*data)
 {
-	/// ft_setchar(data);
+	ft_setchar(data);
 	ft_charcheck(data);
 	ft_formatcheck(data);
 	ft_wallcheck(data);
@@ -25,7 +26,8 @@ int	ft_frame(t_data *data)
 	mlx_clear_window(data->mlx, data->win);
 	ft_put_map(data);
 	if (data->count_c == 0 && data->player_c == 1 && data->door_open == 1)
-		ft_result(data);
+		ft_releaks sult(data);
+
 	return (0);
 }
 
