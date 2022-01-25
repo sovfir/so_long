@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 19:21:20 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/22 17:39:32 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:01:46 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,24 @@
 
 void	ft_readmap(t_data	*data)
 {
-int		fd;
-char	*line;
-int		index;
+	int		fd;
+	char	*line;
+	int		index;
 
-fd = open(data->fn, O_RDONLY);
-line = get_next_line(fd);
-data->map = (char **)malloc(sizeof(char *) * (data->height + 1));
-index = 0;
-while(line)
-{
-	data->map[index] = line;
+	fd = open(data->fn, O_RDONLY);
 	line = get_next_line(fd);
-	index++;
-}
-data->map[index] = NULL;
-free(line);
-line = NULL;
-close(fd);
-printf("ft_readmap\n");
+	data->map = (char **)malloc(sizeof(char *) * (data->height + 1));
+	index = 0;
+	while (line)
+	{
+		data->map[index] = line;
+		line = get_next_line(fd);
+		index++;
+	}
+	data->map[index] = NULL;
+	free(line);
+	line = NULL;
+	close(fd);
 }
 
 void	ft_mapheight(t_data *data)
@@ -47,7 +46,7 @@ void	ft_mapheight(t_data *data)
 		printf("Cant read file\n");
 		exit(EXIT_FAILURE);
 	}
-	while(line[data->width] != '\0')
+	while (line[data->width] != '\0')
 		data->width++;
 	while (line)
 	{

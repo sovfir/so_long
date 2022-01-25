@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:55:30 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/24 20:18:24 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:54:24 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,13 @@ int	ft_frame(t_data *data)
 	mlx_clear_window(data->mlx, data->win);
 	ft_put_map(data);
 	if (data->count_c == 0 && data->player_c == 1 && data->door_open == 1)
-		ft_releaks sult(data);
-
-	return (0);
+	{
+		ft_result(data);
+		return (0);
+	}
 }
 
-int	main(int	argc, char **argv)
+int	main(int argc, char **argv)
 {
 	t_data	data;
 
@@ -42,7 +43,8 @@ int	main(int	argc, char **argv)
 		ft_mapheight(&data);
 		ft_readmap(&data);
 		ft_allcheck(&data);
-		data.win = mlx_new_window(data.mlx, data.width * 40, data.height * 40, "SO_LONG");
+		data.win = mlx_new_window(data.mlx, data.width * 40,
+				data.height * 40, "SO_LONG");
 		mlx_hook(data.win, 17, 0, ft_exit_empty, &data);
 		mlx_hook(data.win, 02, 0, ft_press_button, &data);
 		mlx_loop_hook(data.mlx, ft_frame, &data);

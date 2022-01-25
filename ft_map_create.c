@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 14:00:26 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/22 18:07:52 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/25 19:20:23 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,19 +20,22 @@ int	ft_exit_empty(t_data	*data)
 
 void	ft_put_hero(t_data	*data, int	*j,	int	*i)
 {
-	mlx_put_image_to_window(data->mlx, data->win, data->graphics->player, (*j) * 40, (*i) * 40);
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->graphics->player, (*j) * 40, (*i) * 40);
 	data->pos_y = *i;
 	data->pos_x = *j;
 }
 
 void	ft_put_wall(t_data	*data, int	*j, int	*i)
 {
-	mlx_put_image_to_window(data->mlx, data->win, data->graphics->wall, (*j) * 40, (*i) * 40);
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->graphics->wall, (*j) * 40, (*i) * 40);
 }
 
 void	ft_put_space(t_data	*data, int	*j, int	*i)
 {
-	mlx_put_image_to_window(data->mlx, data->win, data->graphics->space, (*j) * 40, (*i) * 40);
+	mlx_put_image_to_window(data->mlx, data->win,
+		data->graphics->space, (*j) * 40, (*i) * 40);
 }
 
 void	ft_put_map(t_data	*data)
@@ -42,7 +45,7 @@ void	ft_put_map(t_data	*data)
 
 	i = 0;
 	j = 0;
-	while(data->map[i])
+	while (data->map[i])
 	{
 		while (data->map[i][j])
 		{
@@ -53,9 +56,11 @@ void	ft_put_map(t_data	*data)
 			else if (data->map[i][j] == 'P')
 				ft_put_hero(data, &j, &i);
 			else if (data->map[i][j] == 'E')
-				mlx_put_image_to_window(data->mlx, data->win, data->graphics->exit_c, j * 40, i * 40);
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->graphics->exit_c, j * 40, i * 40);
 			else if (data->map[i][j] == 'C')
-				mlx_put_image_to_window(data->mlx, data->win, data->graphics->key, j * 40, i * 40);
+				mlx_put_image_to_window(data->mlx, data->win,
+					data->graphics->key, j * 40, i * 40);
 			j++;
 		}
 		j = 0;

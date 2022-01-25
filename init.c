@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/17 18:56:47 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/22 17:20:36 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/25 18:54:56 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_main_init(t_data	*main, char *name)
 	main->moves = 0;
 	main->player_c = 0;
 	main->door_open = 0;
+	main->endgame = 0;
 	init_pics(main);
-	printf("ft_main_init\n");
 }
 
 void	init_pics(t_data *main)
@@ -45,5 +45,4 @@ void	init_pics(t_data *main)
 			&img_weight, &img_height);
 	main->graphics->player = mlx_xpm_file_to_image(main->mlx, PLAYER,
 			&img_weight, &img_height);
-	printf("init_pics\n");
 }

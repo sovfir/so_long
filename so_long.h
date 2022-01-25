@@ -44,6 +44,7 @@ typedef struct	s_data {
 	int			pos_y;
 	int			moves;
 	int			door_open;
+	int			endgame;
 	int			count_c;
 	int			player_c;
 	void		*img;
@@ -83,11 +84,6 @@ void	ft_put_wall(t_data	*data, int	*j, int	*i);
 void	ft_put_space(t_data	*data, int	*j, int	*i);
 void	ft_put_map(t_data	*data);
 int		ft_frame(t_data *data);
-
-// void	ft_move_w(t_data *data);
-// void	ft_move_s(t_data *data);
-// void	ft_move_a(t_data *data);
-// void	ft_move_d(t_data *data);
 int		ft_press_button(int keycode, t_data *data);
 
 
