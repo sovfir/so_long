@@ -6,7 +6,7 @@
 #    By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/22 15:40:27 by gjacinta          #+#    #+#              #
-#    Updated: 2022/01/25 18:51:32 by gjacinta         ###   ########.fr        #
+#    Updated: 2022/01/26 19:29:48 by gjacinta         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC = main.c\
 	get_next_line.c\
 	get_next_line_utils.c\
 	ft_map_create.c\
-	ft_move.c
+	ft_move.c\
+	norm.c
 
 HDRS = so_long.h
 

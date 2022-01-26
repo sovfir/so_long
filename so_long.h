@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/26 19:04:03 by gjacinta          #+#    #+#             */
+/*   Updated: 2022/01/26 19:49:28 by gjacinta         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
-
-
 # define WALL "./pics/brick.xpm"
 # define SPACE "./pics/floor.xpm"
 # define PLAYER "./pics/hero.xpm"
@@ -9,14 +19,12 @@
 # define EXIT_O "./pics/door_open.xpm"
 # define KEY "./pics/key.xpm"
 # define WIN "./pics/win.xpm"
-#  define BUFFER_SIZE 2
-
+# define BUFFER_SIZE 2
 # define ESC 53
 # define W 13
 # define A 0
 # define S 1
 # define D 2
-
 
 # include "mlx/mlx.h"
 # include <stdlib.h>
@@ -26,7 +34,6 @@
 # include <fcntl.h>
 # include <stdio.h>
 # include <limits.h>
-
 
 typedef struct s_graphics
 {
@@ -38,8 +45,7 @@ typedef struct s_graphics
 	void	*win;
 }	t_graphics;
 
-
-typedef struct	s_data {
+typedef struct s_data {
 	int			pos_x;
 	int			pos_y;
 	int			moves;
@@ -85,6 +91,6 @@ void	ft_put_space(t_data	*data, int	*j, int	*i);
 void	ft_put_map(t_data	*data);
 int		ft_frame(t_data *data);
 int		ft_press_button(int keycode, t_data *data);
-
-
+void	ft_setchar2(t_data *data, int ex2);
+void	ft_put_map2(t_data *data, int i, int j);
 #endif

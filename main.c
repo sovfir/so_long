@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 13:55:30 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/25 18:54:24 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:10:09 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	ft_frame(t_data *data)
 	if (data->count_c == 0 && data->player_c == 1 && data->door_open == 1)
 	{
 		ft_result(data);
-		return (0);
 	}
+	return (0);
 }
 
 int	main(int argc, char **argv)

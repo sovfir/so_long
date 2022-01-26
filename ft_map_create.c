@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 14:00:26 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/25 19:20:23 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:43:34 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,18 +49,7 @@ void	ft_put_map(t_data	*data)
 	{
 		while (data->map[i][j])
 		{
-			if (data->map[i][j] == '1')
-				ft_put_wall(data, &j, &i);
-			else if (data->map[i][j] == '0')
-				ft_put_space(data, &j, &i);
-			else if (data->map[i][j] == 'P')
-				ft_put_hero(data, &j, &i);
-			else if (data->map[i][j] == 'E')
-				mlx_put_image_to_window(data->mlx, data->win,
-					data->graphics->exit_c, j * 40, i * 40);
-			else if (data->map[i][j] == 'C')
-				mlx_put_image_to_window(data->mlx, data->win,
-					data->graphics->key, j * 40, i * 40);
+			ft_put_map2(data, i, j);
 			j++;
 		}
 		j = 0;

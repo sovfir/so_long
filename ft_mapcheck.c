@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/21 19:51:25 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/25 19:16:49 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:30:14 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,7 @@ void	ft_setchar(t_data	*data)
 		}
 		j++;
 	}
-	if (data->count_c == 0 || data->player_c == 0
-		|| ex == 0 || data->player_c > 1)
-		printf("Error.\n WRONG MAP");
-	exit(EXIT_FAILURE);
+	ft_setchar2(data, ex);
 }
 
 void	ft_charcheck(t_data	*data)
@@ -62,8 +59,8 @@ void	ft_charcheck(t_data	*data)
 		while (data->map[j][i])
 		{
 			if (data->map[j][i] == 'P' || data->map[j][i] == 'E'
-			|| data->map[j][i] == '1'
-			|| data->map[j][i] == 'C' || data->map[j][i] == '0')
+					|| data->map[j][i] == '1' || data->map[j][i] == 'C'
+					|| data->map[j][i] == '0')
 				i++;
 			else
 			{

@@ -6,7 +6,7 @@
 /*   By: gjacinta <gjacinta@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/22 15:07:46 by gjacinta          #+#    #+#             */
-/*   Updated: 2022/01/25 19:02:56 by gjacinta         ###   ########.fr       */
+/*   Updated: 2022/01/26 19:11:45 by gjacinta         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,11 +110,11 @@ void	ft_move_d(t_data *data)
 
 int	ft_press_button(int keycode, t_data *data)
 {
+	if (keycode == ESC)
+		ft_exit_empty(data);
 	if (data->endgame == 0)
 	{
-		if (keycode == ESC)
-			ft_exit_empty(data);
-		else if (keycode == W)
+		if (keycode == W)
 			ft_move_w(data);
 		else if (keycode == A)
 			ft_move_a(data);
@@ -122,6 +122,6 @@ int	ft_press_button(int keycode, t_data *data)
 			ft_move_s(data);
 		else if (keycode == D)
 			ft_move_d(data);
-		return (0);
 	}
+	return (0);
 }
